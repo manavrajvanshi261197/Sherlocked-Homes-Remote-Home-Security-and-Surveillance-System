@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart home security system</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Deltion Live Streaming</title>
+    
+</head>
+<style>
+  body{height: 800px;
+    background: url(http://www.choosehomesecurity.com/news/wp-content/uploads/2016/03/homesec.jpg) no-repeat center center;
+    background-size:cover;}
+
+    div{
+        margin-top: 150px;
+        margin-left: 300px;
+        margin-right: 300px;
+        text-align: center;
+        background: rgba(243,249,251,1);
+        background: -moz-linear-gradient(top, rgba(243,249,251,1) 10%, rgba(227,238,244,1) 22%, rgba(215,229,239,0.93) 31%, rgba(179,207,223,0.48) 85%, rgba(173,203,220,0.48) 94%, rgba(224,243,255,0.48) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(10%, rgba(243,249,251,1)), color-stop(22%, rgba(227,238,244,1)), color-stop(31%, rgba(215,229,239,0.93)), color-stop(85%, rgba(179,207,223,0.48)), color-stop(94%, rgba(173,203,220,0.48)), color-stop(100%, rgba(224,243,255,0.48)));
+        background: -webkit-linear-gradient(top, rgba(243,249,251,1) 10%, rgba(227,238,244,1) 22%, rgba(215,229,239,0.93) 31%, rgba(179,207,223,0.48) 85%, rgba(173,203,220,0.48) 94%, rgba(224,243,255,0.48) 100%);
+        background: -o-linear-gradient(top, rgba(243,249,251,1) 10%, rgba(227,238,244,1) 22%, rgba(215,229,239,0.93) 31%, rgba(179,207,223,0.48) 85%, rgba(173,203,220,0.48) 94%, rgba(224,243,255,0.48) 100%);
+        background: -ms-linear-gradient(top, rgba(243,249,251,1) 10%, rgba(227,238,244,1) 22%, rgba(215,229,239,0.93) 31%, rgba(179,207,223,0.48) 85%, rgba(173,203,220,0.48) 94%, rgba(224,243,255,0.48) 100%);
+        background: linear-gradient(to bottom, rgba(243,249,251,1) 10%, rgba(227,238,244,1) 22%, rgba(215,229,239,0.93) 31%, rgba(179,207,223,0.48) 85%, rgba(173,203,220,0.48) 94%, rgba(224,243,255,0.48) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f9fb', endColorstr='#e0f3ff', GradientType=0 );
+        font-family: "trebuchet MS", sans-serif;
+        font-size: 24px;
+        color: #2B2B2B;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-align: center;
+        letter-spacing: 0px;
+        line-height: 23px;
+    }
+
+    h2{
+        padding-top: 10px;
+    }
+</style>
+<body>
+<div>
+    <h2>Home Security System</h2>
+    <video autoplay></video>
+
+    <script>
+        var errorCallback = function(e) {
+            console.log('Reeeejected!', e);
+        };
+        navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
+            var video = document.querySelector('video');
+            video.src = window.URL.createObjectURL(localMediaStream);
+        }, errorCallback);
+    </script>
+
+</div>
+
+</body>
+</html>
